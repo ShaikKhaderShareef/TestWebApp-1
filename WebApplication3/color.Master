@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="color.master.cs" Inherits="WebApplication3.color" %>
+
+<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <meta charset="utf-8" />
+	<title>Color Admin | Page with Top Menu</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="../assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/font-awesome/5.0/css/fontawesome-all.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/animate/animate.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/style.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/style-responsive.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+ <body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="page-container fade page-without-sidebar page-header-fixed page-with-top-menu">
+		<!-- begin #header -->
+		<div id="header" class="header navbar-default">
+			<!-- begin navbar-header -->
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand"><span class="navbar-logo"><i class="ion-ios-cloud"></i></span> <b>Color</b> Admin</a>
+				<button type="button" class="navbar-toggle" data-click="top-menu-toggled">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- end navbar-header -->
+				
+			<!-- begin header navigation right -->
+			<ul class="navbar-nav navbar-right">
+				<li>
+					<form class="navbar-form full-width">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Enter keyword" />
+							<button type="submit" class="btn btn-search"><i class="ion-ios-search-strong"></i></button>
+						</div>
+					</form>
+				</li>
+				<li class="dropdown">
+					<a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle icon">
+						<i class="ion-ios-bell"></i>
+						<span class="label">5</span>
+					</a>
+					<ul class="dropdown-menu media-list pull-right">
+						<li class="dropdown-header">NOTIFICATIONS (5)</li>
+						<li class="media">
+							<a href="javascript:;">
+								<div class="media-left">
+									<i class="fa fa-bug media-object bg-silver-darker"></i>
+								</div>
+								<div class="media-body">
+									<h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+									<div class="text-muted f-s-11">3 minutes ago</div>
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a href="javascript:;">
+								<div class="media-left">
+									<img src="../assets/img/user/user-1.jpg" class="media-object" alt="" />
+									<i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
+								</div>
+								<div class="media-body">
+									<h6 class="media-heading">John Smith</h6>
+									<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+									<div class="text-muted f-s-11">25 minutes ago</div>
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a href="javascript:;">
+								<div class="media-left">
+									<img src="../assets/img/user/user-2.jpg" class="media-object" alt="" />
+									<i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
+								</div>
+								<div class="media-body">
+									<h6 class="media-heading">Olivia</h6>
+									<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+									<div class="text-muted f-s-11">35 minutes ago</div>
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a href="javascript:;">
+								<div class="media-left">
+									<i class="fa fa-plus media-object bg-silver-darker"></i>
+								</div>
+								<div class="media-body">
+									<h6 class="media-heading"> New User Registered</h6>
+									<div class="text-muted f-s-11">1 hour ago</div>
+								</div>
+							</a>
+						</li>
+						<li class="media">
+							<a href="javascript:;">
+								<div class="media-left">
+									<i class="fa fa-envelope media-object bg-silver-darker"></i>
+									<i class="fab fa-google text-warning media-object-icon f-s-14"></i>
+								</div>
+								<div class="media-body">
+									<h6 class="media-heading"> New Email From John</h6>
+									<div class="text-muted f-s-11">2 hour ago</div>
+								</div>
+							</a>
+						</li>
+						<li class="dropdown-footer text-center">
+							<a href="javascript:;">View more</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown navbar-user">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="../assets/img/user/user-13.jpg" alt="" /> 
+						<span class="hidden-xs">Adam Schwartz</span> <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li class="arrow"></li>
+						<li><a href="javascript:;">Edit Profile</a></li>
+						<li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
+						<li><a href="javascript:;">Calendar</a></li>
+						<li><a href="javascript:;">Setting</a></li>
+						<li class="divider"></li>
+						<li><a href="javascript:;">Log Out</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- end header navigation right -->
+		</div>
+		<!-- end #header -->		
+		
+		
+		<form id="form1" runat="server">
+       <%-- <div>--%>
+
+            <asp:Panel ID="Panel1" runat="server" style="padding: 1px 4px; z-index: 1; top: 50px; position: absolute; width: 100%">
+				 <dx:ASPxMenu ID="ASPxMenu1" runat="server" Font-Bold="True" Font-Names="Calibri Light" Font-Size="Medium"  Height="50px" Width="100%" Theme="SoftOrange" HorizontalAlign="Justify"
+                                AppearAfter="0" ItemSpacing="0px" SeparatorHeight="40px" SeparatorWidth="2px" ShowSubMenuShadow="False" BorderBetweenItemAndSubMenu="HideRootOnly" SeparatorColor="Black" 
+                                AllowSelectItem="True" SelectParentItem="True" SyncSelectionMode="None" ShowAsToolbar="True" Font-Italic="False">
+                                   
+                            </dx:ASPxMenu>
+			  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:EdscoAttConnectionString %>' SelectCommand="SELECT [ID], [ParentID], [Text], [NavigateURL] FROM [MenuDB]"></asp:SqlDataSource>
+						 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </asp:Panel>
+
+            <dx:ASPxPanel ID="ASPxPanel1" runat="server" Width="100%" >
+				<PanelCollection>
+					<dx:PanelContent>
+							
+					</dx:PanelContent>
+				</PanelCollection>
+            </dx:ASPxPanel>
+
+		
+            
+           
+       <%-- </div>--%>
+    </form>
+
+		
+		
+       
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../assets/plugins/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="../assets/crossbrowserjs/respond.min.js"></script>
+		<script src="../assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/plugins/js-cookie/js.cookie.js"></script>
+	<script src="../assets/js/theme/apple.min.js"></script>
+	<script src="../assets/js/apps.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<script>
+		$(document).ready(function() {
+			App.init();
+		});
+    </script>
+</body>
+</html>

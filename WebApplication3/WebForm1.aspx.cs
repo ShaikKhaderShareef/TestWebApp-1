@@ -20,7 +20,7 @@ namespace WebApplication3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-        //    EmployeeHireUpdate1();
+         //   EmployeeHireUpdate1();
          //   sendattemail();
         }
 
@@ -1289,7 +1289,7 @@ namespace WebApplication3
         public void EmployeeHireUpdate1()
         {
             //   string lblvacdate = DateTime.Now.ToString("yyyy-MM-dd");
-            string lblvacdate = "2022-12-18";
+            string lblvacdate = "2022-12-19";
                String ConnStr1 = "Data Source=attsrvr-01.eastdeltasa.com;Network Library=DBMSSOCN;Initial Catalog=eastdelta2;User ID=sqladmin;Password=sql@admin;";
             //  string ConnStr1 = ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
 

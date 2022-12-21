@@ -33,12 +33,17 @@ namespace WebApplication3
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
+<<<<<<< HEAD
         /// Button2 control.
+=======
+        /// txtdev control.
+>>>>>>> Develop
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
@@ -49,5 +54,8 @@ namespace WebApplication3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button3;
+=======
+        protected global::System.Web.UI.WebControls.Button txtdev;
+>>>>>>> Develop
     }
 }

@@ -58,7 +58,9 @@
                     </dx:ASPxRibbon>
 					
 					Panel Content Here
+
 					<asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+					<asp:Button ID="txtdev" runat="server" Text="Button" OnClick="Button1_Click" />
 				</div>
 			</div>
 			<!-- end panel -->

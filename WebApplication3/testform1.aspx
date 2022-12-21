@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
             TEST FORM 01
+            TEST FORM 02
         </div>
     </form>
 </body>

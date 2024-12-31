@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -19,6 +20,41 @@ namespace TestWebApp
 
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            foreach (HttpPostedFile postedFile in FileUpload1.PostedFiles)
+            {
+                string filename = Path.GetFileName(postedFile.FileName);
+                string contentType = postedFile.ContentType;
+                int fileSize = postedFile.ContentLength;
+                int jobId = 32;
+                using (Stream fs = postedFile.InputStream)
+                {
+                    using (BinaryReader br = new BinaryReader(fs))
+                    {
+                        byte[] bytes = br.ReadBytes((Int32)fs.Length);
+                        string constr = ConfigurationManager.ConnectionStrings["PeekterConnectionString"].ConnectionString;
+                        using (SqlConnection con = new SqlConnection(constr))
+                        {
+                            string query = "INSERT INTO JobImages (JobId, ImageName, ImageData, ImageSize, ImageType) VALUES (@JobId, @ImageName, @ImageData, @ImageSize, @ImageType)";
+                            using (SqlCommand cmd = new SqlCommand(query))
+                            {
+                                cmd.Connection = con;
+                                cmd.Parameters.AddWithValue("@JobId", jobId);
+                                cmd.Parameters.AddWithValue("@ImageName", filename);
+                                cmd.Parameters.AddWithValue("@ImageData", bytes);
+                                cmd.Parameters.AddWithValue("@ImageSize", fileSize);
+                                cmd.Parameters.AddWithValue("@ImageType", contentType);
+                                con.Open();
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                    }
+                }
+            }
+          //  Response.Redirect(Request.Url.AbsoluteUri);
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
             //string targetPath = Path.Combine(@"\\46.105.37.107\edc database\SUBMITTAL FILES\", "PROJ-118", "CVI", "Submitted"); //with complete path
@@ -36,7 +72,8 @@ namespace TestWebApp
             //  //  ExportReportToPDF(targetPath1, fname);
             //}
 
-            SubmittalEmail_Alerts();
+            //  SubmittalEmail_Alerts();
+            Response.Redirect("~/WebForm2.aspx");
         }
 
         public void SubmittalEmail_Alerts()

@@ -12,7 +12,7 @@
             TEST FORM 01
             TEST FORM 02
             TEST FORM 03
-            
+            <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" Width="365px" />
         </div>
     </form>
 </body>

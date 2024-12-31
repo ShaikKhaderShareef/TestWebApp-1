@@ -87,5 +87,10 @@
             </asp:Panel>
         </div>
     </form>
+
+             <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="true" />
+             
+              <asp:Button ID="Button2" runat="server" Text="Submit" OnClick="Button2_Click" />
+
 </body>
 </html>

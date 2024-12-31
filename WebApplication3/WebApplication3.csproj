@@ -6140,6 +6140,19 @@
     <Content Include="assets\plugins\tether\css\tether.min.css" />
     <Content Include="assets\plugins\tether\js\tether.js" />
     <Content Include="assets\plugins\tether\js\tether.min.js" />
+    <Content Include="Iqamaemail.aspx" />
+    <Content Include="Missingemps_TodayAtt1.aspx" />
+    <Content Include="Missingemps_YesterdayAtt1.aspx" />
+    <Content Include="TodayAtt1.aspx" />
+    <Content Include="YesterdayAtt2.aspx" />
+    <Content Include="YesterdayAtt1.aspx" />
+    <Content Include="TodayAtt.aspx" />
+    <Content Include="TodayAttPending.aspx" />
+    <Content Include="testtoday3.aspx" />
+    <Content Include="testtoday2.aspx" />
+    <Content Include="testtoday1.aspx" />
+    <Content Include="testform3.aspx" />
+    <Content Include="testform2.aspx" />
     <Content Include="testform1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -6151,7 +6164,98 @@
     <Compile Include="color.Master.designer.cs">
       <DependentUpon>color.Master</DependentUpon>
     </Compile>
+    <Compile Include="Iqamaemail.aspx.cs">
+      <DependentUpon>Iqamaemail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Iqamaemail.aspx.designer.cs">
+      <DependentUpon>Iqamaemail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Missingemps_TodayAtt1.aspx.cs">
+      <DependentUpon>Missingemps_TodayAtt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Missingemps_TodayAtt1.aspx.designer.cs">
+      <DependentUpon>Missingemps_TodayAtt1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Missingemps_YesterdayAtt1.aspx.cs">
+      <DependentUpon>Missingemps_YesterdayAtt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Missingemps_YesterdayAtt1.aspx.designer.cs">
+      <DependentUpon>Missingemps_YesterdayAtt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TodayAtt1.aspx.cs">
+      <DependentUpon>TodayAtt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TodayAtt1.aspx.designer.cs">
+      <DependentUpon>TodayAtt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YesterdayAtt2.aspx.cs">
+      <DependentUpon>YesterdayAtt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YesterdayAtt2.aspx.designer.cs">
+      <DependentUpon>YesterdayAtt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YesterdayAtt1.aspx.cs">
+      <DependentUpon>YesterdayAtt1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YesterdayAtt1.aspx.designer.cs">
+      <DependentUpon>YesterdayAtt1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TodayAtt.aspx.cs">
+      <DependentUpon>TodayAtt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TodayAtt.aspx.designer.cs">
+      <DependentUpon>TodayAtt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TodayAttPending.aspx.cs">
+      <DependentUpon>TodayAttPending.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TodayAttPending.aspx.designer.cs">
+      <DependentUpon>TodayAttPending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testtoday3.aspx.cs">
+      <DependentUpon>testtoday3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testtoday3.aspx.designer.cs">
+      <DependentUpon>testtoday3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testtoday2.aspx.cs">
+      <DependentUpon>testtoday2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testtoday2.aspx.designer.cs">
+      <DependentUpon>testtoday2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testtoday1.aspx.cs">
+      <DependentUpon>testtoday1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testtoday1.aspx.designer.cs">
+      <DependentUpon>testtoday1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testform3.aspx.cs">
+      <DependentUpon>testform3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testform3.aspx.designer.cs">
+      <DependentUpon>testform3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testform2.aspx.cs">
+      <DependentUpon>testform2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testform2.aspx.designer.cs">
+      <DependentUpon>testform2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="testform1.aspx.cs">
       <DependentUpon>testform1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

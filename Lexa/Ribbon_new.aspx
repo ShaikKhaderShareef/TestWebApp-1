@@ -39,8 +39,8 @@
                              <Groups>
                                  <dx:RibbonGroup Text="Group1" Name="Group1">
                                      <Items>
-                                         <dx:RibbonButtonItem Text="text1" Name="text1"></dx:RibbonButtonItem>
-                                         <dx:RibbonButtonItem Text="text2" Name="text2"></dx:RibbonButtonItem>
+                                         <dx:RibbonButtonItem Text="text1" Name="text11"></dx:RibbonButtonItem>
+                                         <dx:RibbonButtonItem Text="text2" Name="text22"></dx:RibbonButtonItem>
                                      </Items>
                                  </dx:RibbonGroup>
                              </Groups>

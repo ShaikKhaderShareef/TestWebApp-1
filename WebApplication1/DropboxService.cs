@@ -17,6 +17,6 @@ public class DropboxService
     public List<Metadata> GetFiles(string path = "")
     {
         var list = _client.Files.ListFolderAsync(path).Result;
-        return list.Entries.ToList();
+        return list.Entries.ToList(); 
     }
 }

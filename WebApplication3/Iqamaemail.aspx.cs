@@ -19,9 +19,9 @@ namespace WebApplication3
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //QiwaEmail_Saudis();
-            //QiwaEmail_NonSaudis();
-            //IqamaEmail_NonSaudis();
+            QiwaEmail_Saudis();
+            QiwaEmail_NonSaudis();
+            IqamaEmail_NonSaudis();
             attendancemail();
             DateTime todaydate = DateTime.Now;
             //    string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
@@ -54,7 +54,7 @@ namespace WebApplication3
 
                     mbody1 += "Dear Sir, <br /><br /> Kindly find the Auto Notification of Saudi Employee Qiwa Contract Expire details. <br /><br /> NOTE: This email is Auto generated from the system. So Please don't reply to this email. <br /><br />";
 
-                    mbody = "<table border=" + 1 + " cellpadding=" + 1 + " cellspacing=" + 1 + " font-family=Segoe UI>";
+                    mbody = "<table border=" + 5 + " cellpadding=" + 5 + " cellspacing=" + 5 + " font-family=Segoe UI>";
                     mbody += "<tr bgcolor='LightGreen' font-family='Century Gothic'>";
                     mbody += "<td>EMPID</td>";
                     mbody += "<td>EMPLOYEE NAME</td>";
@@ -352,10 +352,10 @@ namespace WebApplication3
                 {
                     string projectname = Title[0].ToString();
 
-                    String Sqlattabsent = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T' and (PMO_REMARK = 'Absent') and ( type = 'D' or type = 'M') and projectname = '" + projectname + "' ";
-                    String Sqlattpresent = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T' and (PMO_REMARK <> 'Absent' and PMO_REMARK = '') and ( type = 'D' or type = 'M') and projectname = '" + projectname + "' ";
-                    String Sqlattothers = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T' and (PMO_REMARK <> 'Absent' and PMO_REMARK <> '') and ( type = 'D' or type = 'M') and projectname = '" + projectname + "' ";
-                    String Sqlattnight = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T'  and ( type = 'N' ) and projectname = '" + projectname + "' ";
+                    String Sqlattabsent = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T' and PMO_REMARK = 'Absent' and ( type = 'D' or type = 'M') and projectname = '" + projectname + "' ";
+                    String Sqlattpresent = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T' and PMO_REMARK = 'Initial Record' and ( type = 'D' or type = 'M') and projectname = '" + projectname + "' ";
+                    String Sqlattothers = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T' and PMO_REMARK = 'Delay' and ( type = 'D' or type = 'M') and projectname = '" + projectname + "' ";
+                    String Sqlattnight = "select count(pernr) from ZHR_TB_ATT_A where tdate='" + lblvacdate + "' and record='T'  and (type = 'N') and projectname = '" + projectname + "' ";
 
 
                     SqlCommand Sqlattabsentcmd = new SqlCommand(Sqlattabsent, conn61);
@@ -410,10 +410,10 @@ namespace WebApplication3
                     body += "<tr bgcolor='Orange' font-family='Century Gothic'>";
                     body += "<td>ATTENDANCE DATE</td>";
                     body += "<td>PROJECT NAME</td>";
-                    body += "<td>PROJECT LOCATION</td>";
+                    body += "<td>LOCATION</td>";
                     body += "<td>ABSENT COUNT</td>";
                     body += "<td>PRESENT COUNT</td>";
-                    body += "<td>OTHERS COUNT</td>";
+                    body += "<td>DELAY COUNT</td>";
                     body += "<td>NIGHT SHIFT</td>";
                     body += "<td>TOTAL COUNT</td>";
                     body += "</tr>";
@@ -464,9 +464,10 @@ namespace WebApplication3
                     // message.To.Add(new MailAddress(emailid));                  
 
                     message.To.Add(new MailAddress("kshareef@alramsat.com"));
+                    message.To.Add(new MailAddress("mshari@alramsat.com"));
                     //add cc         
 
-                //    message.CC.Add(new MailAddress("kshareef"));
+                    //    message.CC.Add(new MailAddress("kshareef"));
 
 
                     message.Subject = "Attendance Daily Summary Report dated " + DateTime.Now;

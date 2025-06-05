@@ -30,11 +30,11 @@ namespace WebApplication3
 
             //   DateTime todaydate = DateTime.Now;
             //    string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-28";
+            string todaydate1 = "2025-05-22";
             DateTime todaydate1_ = Convert.ToDateTime(todaydate1);
             DayOfWeek dayofweek = todaydate1_.DayOfWeek;
 
-            Label1.Text = "Missed Employees Yesterday Attendance Data Update already having entries in ZHR_TB_ATT_B table with record C successfully dated '" + todaydate1 + "' and weekday '"+ dayofweek;
+            Label1.Text = "Missed Employees Yesterday Attendance Data Update already having entries in ZHR_TB_ATT_B table with record A successfully dated '" + todaydate1 + "' and weekday '"+ dayofweek;
         }
 
         // DELETE FROM ATT_B ENTRIES STARTS
@@ -47,7 +47,7 @@ namespace WebApplication3
                 conn.Open();
                 DateTime todaydate = DateTime.Now;
                 //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-28";
+                string todaydate1 = "2025-05-22";
                 string stringattcmdA1 = "Delete from ZHR_TB_ATT_B where tdate = '" + todaydate1 + "' and  RECORD = 'A'";
                 SqlCommand attcmdA1 = new SqlCommand(stringattcmdA1, conn);
                 attcmdA1.ExecuteNonQuery();
@@ -64,7 +64,7 @@ namespace WebApplication3
             {
              //   DateTime todaydate = DateTime.Now;
                 //    string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-28";
+                string todaydate1 = "2025-05-22";
                 DateTime todaydate1_ = Convert.ToDateTime(todaydate1);
                 DayOfWeek dayofweek = todaydate1_.DayOfWeek;
 
@@ -316,7 +316,7 @@ namespace WebApplication3
         {
         //    DateTime todaydate = DateTime.Now;
             //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-28";
+            string todaydate1 = "2025-05-22";
                //  String ConnStr1 = "Data Source=172.177.184.39;Network Library=DBMSSOCN;Initial Catalog=EstimationNew;User ID=sqladmin;Password=Sqlegypt@123456;";
                string ConnStr1 = "Data Source=192.168.15.4;Network Library=DBMSSOCN;Initial Catalog=Rccattdb;User ID=sa;Password=sql@12345;";
             using (SqlConnection conn61 = new SqlConnection(ConnStr1))
@@ -570,7 +570,7 @@ namespace WebApplication3
         {
          //   DateTime todaydate = DateTime.Now;
             //    string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-28";
+            string todaydate1 = "2025-05-22";
            //  String ConnStr1 = "Data Source=172.177.184.39;Network Library=DBMSSOCN;Initial Catalog=EstimationNew;User ID=sqladmin;Password=Sqlegypt@123456;";
            string ConnStr1 = "Data Source=192.168.15.4;Network Library=DBMSSOCN;Initial Catalog=Rccattdb;User ID=sa;Password=sql@12345;";
             using (SqlConnection conn61 = new SqlConnection(ConnStr1))
@@ -745,7 +745,7 @@ namespace WebApplication3
                 conn.Open();
              //   DateTime todaydate = DateTime.Now;
              //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-28";
+                string todaydate1 = "2025-05-22";
                 string stringattcmdA = "UPDATE ZHR_TB_ATT_A SET PMO_REMARK = 'Day Off' where RECORD = 'Y' AND (WSNAME_PMO = '00:00:00' and WSNAME_SAP = '00:00:00') and TDATE = '" + todaydate1 + "'";
                 SqlCommand attcmdA = new SqlCommand(stringattcmdA, conn);
                 attcmdA.ExecuteNonQuery();
@@ -764,7 +764,7 @@ namespace WebApplication3
                 conn.Open();
             //    DateTime todaydate = DateTime.Now;
              //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-28";
+                string todaydate1 = "2025-05-22";
                 string stringattcmdA = "UPDATE ZHR_TB_ATT_B SET ZHR_TB_ATT_B.SITE_REMARK = ZHR_TB_ATT_A.SITE_REMARK, ZHR_TB_ATT_B.PMO_REMARK1 = ZHR_TB_ATT_A.PMO_REMARK1 FROM ZHR_TB_ATT_A INNER JOIN ZHR_TB_ATT_B ON ZHR_TB_ATT_A.PERNR = ZHR_TB_ATT_B.PERNR and ZHR_TB_ATT_A.TDATE = ZHR_TB_ATT_B.TDATE and ZHR_TB_ATT_B.RECORD = 'A' and ZHR_TB_ATT_A.RECORD = 'Y' and ZHR_TB_ATT_B.TDATE = '"+todaydate1+"' ";
                 SqlCommand attcmdA = new SqlCommand(stringattcmdA, conn);
                 attcmdA.ExecuteNonQuery();
@@ -785,7 +785,7 @@ namespace WebApplication3
                 conn.Open();
             //    DateTime todaydate = DateTime.Now;
                 //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-28";
+                string todaydate1 = "2025-05-22";
                 string stringattcmdA1 = "Delete from ZHR_TB_ATT_A where tdate = '" + todaydate1 + "' and  RECORD = 'Y'";
                 SqlCommand attcmdA1 = new SqlCommand(stringattcmdA1, conn);
                 attcmdA1.ExecuteNonQuery();
@@ -804,7 +804,7 @@ namespace WebApplication3
                 conn.Open();
             //    DateTime todaydate = DateTime.Now;
              //   string todaydate1 = todaydate.ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-28";
+                string todaydate1 = "2025-05-22";
                 string stringattcmdA = "INSERT INTO ZHR_TB_ATT_A (MANDT, tdate, pernr, record, ename, BADGE_NO, checkin, CHECKOUT, NEXTDAYIN, NEXTDAYOUT, DELAY_DUR, EARLY_L_DUR, WSNAME_SAP, WSNAME_PMO, wsid, type, PMO_REMARK, PROJECTNAME, DEVICENAME, PROJECTLOCATION, SITE_REMARK, PMO_REMARK1) SELECT MANDT, tdate, pernr, 'Y', ename, BADGE_NO, checkin, CHECKOUT, NEXTDAYIN, NEXTDAYOUT, DELAY_DUR, EARLY_L_DUR, WSNAME_SAP, WSNAME_PMO, wsid, type, PMO_REMARK, PROJECTNAME, DEVICENAME, PROJECTLOCATION, SITE_REMARK, PMO_REMARK1 FROM ZHR_TB_ATT_B WHERE TDATE = '" + todaydate1 + "' AND RECORD = 'A'; ";
                 SqlCommand attcmdA = new SqlCommand(stringattcmdA, conn);
                 attcmdA.ExecuteNonQuery();
@@ -821,7 +821,7 @@ namespace WebApplication3
         {
          //   DateTime todaydate = DateTime.Now;
          //   string todaydate1 = todaydate.ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-28";
+            string todaydate1 = "2025-05-22";
             //  String ConnStr1 = "Data Source=172.177.184.39;Network Library=DBMSSOCN;Initial Catalog=EstimationNew;User ID=sqladmin;Password=Sqlegypt@123456;";
             string ConnStr1 = "Data Source=192.168.15.4;Network Library=DBMSSOCN;Initial Catalog=Rccattdb;User ID=sa;Password=sql@12345;";
             using (SqlConnection conn611 = new SqlConnection(ConnStr1))

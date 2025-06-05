@@ -27,7 +27,7 @@ namespace WebApplication3
 
             //    DateTime todaydate = DateTime.Now;
             //    string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-17";
+            string todaydate1 = "2025-02-23";
             DateTime todaydate1_ = Convert.ToDateTime(todaydate1);
             DayOfWeek dayofweek = todaydate1_.DayOfWeek;
 
@@ -42,7 +42,7 @@ namespace WebApplication3
             {
              //   DateTime todaydate = DateTime.Now;
                 //    string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-17";
+                string todaydate1 = "2025-02-23";
                 DateTime todaydate1_ = Convert.ToDateTime(todaydate1);
                 DayOfWeek dayofweek = todaydate1_.DayOfWeek;
 
@@ -295,7 +295,7 @@ namespace WebApplication3
         {
             DateTime todaydate = DateTime.Now;
             //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-17";
+            string todaydate1 = "2025-02-23";
                //  String ConnStr1 = "Data Source=172.177.184.39;Network Library=DBMSSOCN;Initial Catalog=EstimationNew;User ID=sqladmin;Password=Sqlegypt@123456;";
                string ConnStr1 = "Data Source=192.168.15.4;Network Library=DBMSSOCN;Initial Catalog=Rccattdb;User ID=sa;Password=sql@12345;";
             using (SqlConnection conn61 = new SqlConnection(ConnStr1))
@@ -549,7 +549,7 @@ namespace WebApplication3
         {
             DateTime todaydate = DateTime.Now;
             //    string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-17";
+            string todaydate1 = "2025-02-23";
            //  String ConnStr1 = "Data Source=172.177.184.39;Network Library=DBMSSOCN;Initial Catalog=EstimationNew;User ID=sqladmin;Password=Sqlegypt@123456;";
            string ConnStr1 = "Data Source=192.168.15.4;Network Library=DBMSSOCN;Initial Catalog=Rccattdb;User ID=sa;Password=sql@12345;";
             using (SqlConnection conn61 = new SqlConnection(ConnStr1))
@@ -724,7 +724,7 @@ namespace WebApplication3
                 conn.Open();
                 DateTime todaydate = DateTime.Now;
              //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-17";
+                string todaydate1 = "2025-02-23";
                 string stringattcmdA = "UPDATE ZHR_TB_ATT_A SET PMO_REMARK = 'Day Off' where RECORD = 'Y' AND (WSNAME_PMO = '00:00:00' and WSNAME_SAP = '00:00:00') and TDATE = '" + todaydate1 + "'";
                 SqlCommand attcmdA = new SqlCommand(stringattcmdA, conn);
                 attcmdA.ExecuteNonQuery();
@@ -743,7 +743,7 @@ namespace WebApplication3
                 conn.Open();
                 DateTime todaydate = DateTime.Now;
              //   string todaydate1 = todaydate.AddDays(-1).ToString("yyyy-MM-dd");
-                string todaydate1 = "2024-12-17";
+                string todaydate1 = "2025-02-23";
                 string stringattcmdA = "UPDATE ZHR_TB_ATT_A SET ZHR_TB_ATT_A.RECORD = 'Y',	ZHR_TB_ATT_A.CHECKIN = ZHR_TB_ATT_B.CHECKIN, ZHR_TB_ATT_A.CHECKOUT = ZHR_TB_ATT_B.CHECKOUT, ZHR_TB_ATT_A.NEXTDAYIN = ZHR_TB_ATT_B.NEXTDAYIN, ZHR_TB_ATT_A.NEXTDAYOUT = ZHR_TB_ATT_B.NEXTDAYOUT,	ZHR_TB_ATT_A.DELAY_DUR = ZHR_TB_ATT_B.DELAY_DUR,	ZHR_TB_ATT_A.EARLY_L_DUR = ZHR_TB_ATT_B.EARLY_L_DUR,    ZHR_TB_ATT_A.WSNAME_SAP = ZHR_TB_ATT_B.WSNAME_SAP,	ZHR_TB_ATT_A.WSNAME_PMO = ZHR_TB_ATT_B.WSNAME_PMO,	ZHR_TB_ATT_A.WSID = ZHR_TB_ATT_B.WSID,	ZHR_TB_ATT_A.TYPE = ZHR_TB_ATT_B.TYPE,	ZHR_TB_ATT_A.PROJECTNAME = ZHR_TB_ATT_B.PROJECTNAME,	ZHR_TB_ATT_A.DEVICENAME = ZHR_TB_ATT_B.DEVICENAME,	ZHR_TB_ATT_A.PROJECTLOCATION = ZHR_TB_ATT_B.PROJECTLOCATION,	ZHR_TB_ATT_A.PMO_REMARK = ZHR_TB_ATT_B.PMO_REMARK FROM ZHR_TB_ATT_A INNER JOIN ZHR_TB_ATT_B ON ZHR_TB_ATT_A.PERNR = ZHR_TB_ATT_B.PERNR and ZHR_TB_ATT_A.TDATE = ZHR_TB_ATT_B.TDATE and ZHR_TB_ATT_B.RECORD = 'A' and ZHR_TB_ATT_A.RECORD = 'T' and ZHR_TB_ATT_B.TDATE = '" + todaydate1 + "'";
                 SqlCommand attcmdA = new SqlCommand(stringattcmdA, conn);
                 attcmdA.ExecuteNonQuery();
@@ -758,7 +758,7 @@ namespace WebApplication3
         {
             DateTime todaydate = DateTime.Now;
          //   string todaydate1 = todaydate.ToString("yyyy-MM-dd");
-            string todaydate1 = "2024-12-17";
+            string todaydate1 = "2025-02-23";
             //  String ConnStr1 = "Data Source=172.177.184.39;Network Library=DBMSSOCN;Initial Catalog=EstimationNew;User ID=sqladmin;Password=Sqlegypt@123456;";
             string ConnStr1 = "Data Source=192.168.15.4;Network Library=DBMSSOCN;Initial Catalog=Rccattdb;User ID=sa;Password=sql@12345;";
             using (SqlConnection conn611 = new SqlConnection(ConnStr1))

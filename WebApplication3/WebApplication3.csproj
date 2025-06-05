@@ -49,7 +49,13 @@
     <Reference Include="DevExpress.Web.ASPxThemes.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.Resources.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.v19.2, Version=19.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Dropbox.Api, Version=7.0.0.0, Culture=neutral, PublicKeyToken=310f0e82fbb45d01, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dropbox.Api.7.0.0\lib\netstandard2.0\Dropbox.Api.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ADemps.aspx" />
     <Content Include="assets\crossbrowserjs\excanvas.min.js" />
     <Content Include="assets\crossbrowserjs\html5shiv.js" />
     <Content Include="assets\crossbrowserjs\respond.min.js" />
@@ -6157,6 +6164,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADemps.aspx.cs">
+      <DependentUpon>ADemps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADemps.aspx.designer.cs">
+      <DependentUpon>ADemps.aspx</DependentUpon>
+    </Compile>
     <Compile Include="color.Master.cs">
       <DependentUpon>color.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
